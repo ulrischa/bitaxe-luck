@@ -1,0 +1,80 @@
+# Uli: replace ALL sample entity IDs with the IDs from your installation.
+# This is a COMPLETE dashboard; paste into a NEW dashboard's raw configuration editor.
+title: Bitaxe Luck
+views:
+  - title: Mining
+    path: mining
+    icon: mdi:clover
+    cards:
+      - type: markdown
+        content: |
+          # Bitaxe Luck
+          **Dein bester Share im Vergleich.**
+          Luck vergleicht Mining-Läufe mit gleicher Rechenarbeit. Jeder Hash ist ein neuer Versuch – kein Fortschritt zu einem Block.
+      - type: gauge
+        entity: sensor.bitaxe_luck_percentile
+        name: Luck-Perzentil
+        min: 0
+        max: 100
+        needle: true
+        segments:
+          - from: 0
+            color: '#d9534f'
+          - from: 10
+            color: '#e7a33e'
+          - from: 25
+            color: '#4b9db9'
+          - from: 75
+            color: '#26a269'
+          - from: 90
+            color: '#00c781'
+      - type: entities
+        title: Qualität der Shares
+        show_header_toggle: false
+        entities:
+          - entity: sensor.bitaxe_luck_rating
+          - entity: sensor.bitaxe_best_difficulty
+          - entity: sensor.bitaxe_best_session_difficulty
+          - entity: sensor.bitaxe_block_distance_factor
+          - entity: sensor.bitaxe_bits_to_block
+          - entity: sensor.bitaxe_expected_interval_for_best_share
+          - entity: sensor.bitaxe_luck_vs_median
+      - type: entities
+        title: Miner
+        show_header_toggle: false
+        entities:
+          - entity: switch.bitaxe_mining
+          - entity: sensor.bitaxe_hashrate
+          - entity: sensor.bitaxe_hashrate_1_h
+          - entity: sensor.bitaxe_power
+          - entity: sensor.bitaxe_efficiency
+          - entity: sensor.bitaxe_asic_temperature
+          - entity: sensor.bitaxe_voltage_regulator_temperature
+          - entity: sensor.bitaxe_fan_speed
+      - type: entities
+        title: Block-Statistik
+        entities:
+          - entity: sensor.bitaxe_network_difficulty
+          - entity: sensor.bitaxe_block_chance_per_24_h
+          - entity: sensor.bitaxe_equivalent_block_chance_for_work_done
+          - entity: sensor.bitaxe_expected_block_interval
+      - type: history-graph
+        title: Luck-Verlauf
+        hours_to_show: 48
+        entities:
+          - entity: sensor.bitaxe_luck_percentile
+            name: Luck-Perzentil
+      - type: history-graph
+        title: Hashrate · GH/s
+        hours_to_show: 24
+        entities:
+          - entity: sensor.bitaxe_hashrate
+            name: Hashrate
+      - type: history-graph
+        title: Temperaturen · °C
+        hours_to_show: 24
+        entities:
+          - entity: sensor.bitaxe_asic_temperature
+            name: ASIC
+          - entity: sensor.bitaxe_voltage_regulator_temperature
+            name: Spannungsregler
