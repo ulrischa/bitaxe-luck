@@ -151,4 +151,4 @@ The CI workflow additionally installs the supported Home Assistant baseline and 
 - [Home Assistant integration manifests](https://developers.home-assistant.io/docs/creating_integration_manifest/)
 - [Home Assistant local integration brand images](https://developers.home-assistant.io/docs/core/integration/brand_images/)
 
-Created for Uli. Independent community project, not an official Bitaxe or Home Assistant integration. MIT license; see [LICENSE](LICENSE).
+Independent community project, not an official Bitaxe or Home Assistant integration. MIT license; see [LICENSE](LICENSE).
