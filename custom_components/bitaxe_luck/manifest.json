@@ -1,0 +1,14 @@
+{
+  "domain": "bitaxe_luck",
+  "name": "Bitaxe Luck",
+  "version": "0.1.1",
+  "codeowners": [
+    "@ulrischa"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/ulrischa/bitaxe-luck",
+  "issue_tracker": "https://github.com/ulrischa/bitaxe-luck/issues",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "requirements": []
+}

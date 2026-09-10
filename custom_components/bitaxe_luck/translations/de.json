@@ -1,0 +1,179 @@
+{
+  "title": "Bitaxe Luck",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Bitaxe verbinden",
+        "description": "Direkte Verbindung zur lokalen AxeOS-API. Es wird kein Cloud-Dienst verwendet.",
+        "data": {
+          "host": "Host oder IP-Adresse",
+          "port": "HTTP-Port"
+        },
+        "data_description": {
+          "host": "Zum Beispiel 192.168.1.50, bitaxe.local oder http://192.168.1.50",
+          "port": "AxeOS verwendet normalerweise Port 80."
+        }
+      },
+      "reconfigure": {
+        "title": "Bitaxe neu konfigurieren",
+        "description": "Adresse desselben Bitaxe-Geräts ändern.",
+        "data": {
+          "host": "Host oder IP-Adresse",
+          "port": "HTTP-Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Der Bitaxe ist nicht erreichbar.",
+      "invalid_host": "Gib einen gültigen AxeOS-Host, eine IP-Adresse oder eine HTTP-URL ein.",
+      "invalid_response": "Der Endpunkt antwortet, sieht aber nicht wie eine kompatible AxeOS-API aus.",
+      "unknown": "Unerwarteter Fehler."
+    },
+    "abort": {
+      "already_configured": "Dieser Bitaxe ist bereits eingerichtet.",
+      "unique_id_mismatch": "Die neue Adresse gehört zu einem anderen Bitaxe."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Bitaxe-Luck-Optionen",
+        "data": {
+          "scan_interval": "Aktualisierungsintervall"
+        },
+        "data_description": {
+          "scan_interval": "Wie oft Home Assistant /api/system/info abfragt."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "hashrate": {
+        "name": "Hashrate"
+      },
+      "hashrate_1m": {
+        "name": "Hashrate 1 min"
+      },
+      "hashrate_10m": {
+        "name": "Hashrate 10 min"
+      },
+      "hashrate_1h": {
+        "name": "Hashrate 1 h"
+      },
+      "expected_hashrate": {
+        "name": "Erwartete Hashrate"
+      },
+      "power": {
+        "name": "Leistung"
+      },
+      "efficiency": {
+        "name": "Effizienz"
+      },
+      "temperature": {
+        "name": "ASIC-Temperatur"
+      },
+      "vr_temperature": {
+        "name": "Spannungsregler-Temperatur"
+      },
+      "fan_rpm": {
+        "name": "Lüfterdrehzahl"
+      },
+      "error_percentage": {
+        "name": "Hash-Fehler"
+      },
+      "accepted_shares": {
+        "name": "Akzeptierte Shares"
+      },
+      "rejected_shares": {
+        "name": "Abgelehnte Shares"
+      },
+      "rejected_share_percentage": {
+        "name": "Anteil abgelehnter Shares"
+      },
+      "best_difficulty": {
+        "name": "Beste Difficulty"
+      },
+      "best_session_difficulty": {
+        "name": "Beste Session-Difficulty"
+      },
+      "network_difficulty": {
+        "name": "Netzwerk-Difficulty"
+      },
+      "pool_difficulty": {
+        "name": "Pool-Difficulty"
+      },
+      "luck_percentile": {
+        "name": "Luck-Perzentil"
+      },
+      "luck_rating": {
+        "name": "Luck-Einordnung",
+        "state": {
+          "very_unlucky": "Sehr wenig Glück",
+          "unlucky": "Eher wenig Glück",
+          "normal": "Normal",
+          "lucky": "Glücklich",
+          "very_lucky": "Sehr glücklich"
+        }
+      },
+      "luck_ratio": {
+        "name": "Luck gegenüber Median"
+      },
+      "expected_median_best_difficulty": {
+        "name": "Erwartete Median-Best-Difficulty"
+      },
+      "block_distance_factor": {
+        "name": "Abstandsfaktor zum Block"
+      },
+      "bits_to_block": {
+        "name": "Bits bis zum Block"
+      },
+      "best_share_expected_hours": {
+        "name": "Erwarteter Abstand für Best Share"
+      },
+      "block_chance_work_ppm": {
+        "name": "Äquivalente Blockchance für geleistete Arbeit"
+      },
+      "block_chance_24h_ppm": {
+        "name": "Blockchance pro 24 h"
+      },
+      "expected_block_years": {
+        "name": "Erwarteter Blockabstand"
+      },
+      "uptime": {
+        "name": "Session-Laufzeit"
+      },
+      "total_uptime": {
+        "name": "Gesamtlaufzeit"
+      },
+      "block_height": {
+        "name": "Blockhöhe"
+      },
+      "blocks_found": {
+        "name": "Gefundene Blöcke"
+      },
+      "wifi_rssi": {
+        "name": "WLAN-Signal"
+      },
+      "core_voltage": {
+        "name": "ASIC-Kernspannung"
+      },
+      "current": {
+        "name": "Strom"
+      }
+    },
+    "switch": {
+      "mining": {
+        "name": "Mining"
+      }
+    },
+    "button": {
+      "restart": {
+        "name": "Neu starten"
+      },
+      "identify": {
+        "name": "Identifizieren"
+      }
+    }
+  }
+}

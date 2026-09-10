@@ -1,0 +1,179 @@
+{
+  "title": "Bitaxe Luck",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect Bitaxe",
+        "description": "Connect directly to the local AxeOS API. No cloud service is used.",
+        "data": {
+          "host": "Host or IP address",
+          "port": "HTTP port"
+        },
+        "data_description": {
+          "host": "For example 192.168.1.50, bitaxe.local, or http://192.168.1.50",
+          "port": "AxeOS normally uses port 80."
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Bitaxe",
+        "description": "Change the address of the same Bitaxe device.",
+        "data": {
+          "host": "Host or IP address",
+          "port": "HTTP port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the Bitaxe.",
+      "invalid_host": "Enter a valid local AxeOS host, IP address, or HTTP URL.",
+      "invalid_response": "The endpoint responded, but it does not look like a compatible AxeOS API.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This Bitaxe is already configured.",
+      "unique_id_mismatch": "The new address belongs to a different Bitaxe."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Bitaxe Luck options",
+        "data": {
+          "scan_interval": "Update interval"
+        },
+        "data_description": {
+          "scan_interval": "How often Home Assistant reads /api/system/info."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "hashrate": {
+        "name": "Hashrate"
+      },
+      "hashrate_1m": {
+        "name": "Hashrate 1 min"
+      },
+      "hashrate_10m": {
+        "name": "Hashrate 10 min"
+      },
+      "hashrate_1h": {
+        "name": "Hashrate 1 h"
+      },
+      "expected_hashrate": {
+        "name": "Expected hashrate"
+      },
+      "power": {
+        "name": "Power"
+      },
+      "efficiency": {
+        "name": "Efficiency"
+      },
+      "temperature": {
+        "name": "ASIC temperature"
+      },
+      "vr_temperature": {
+        "name": "Voltage regulator temperature"
+      },
+      "fan_rpm": {
+        "name": "Fan speed"
+      },
+      "error_percentage": {
+        "name": "Hash errors"
+      },
+      "accepted_shares": {
+        "name": "Accepted shares"
+      },
+      "rejected_shares": {
+        "name": "Rejected shares"
+      },
+      "rejected_share_percentage": {
+        "name": "Rejected share rate"
+      },
+      "best_difficulty": {
+        "name": "Best difficulty"
+      },
+      "best_session_difficulty": {
+        "name": "Best session difficulty"
+      },
+      "network_difficulty": {
+        "name": "Network difficulty"
+      },
+      "pool_difficulty": {
+        "name": "Pool difficulty"
+      },
+      "luck_percentile": {
+        "name": "Luck percentile"
+      },
+      "luck_rating": {
+        "name": "Luck rating",
+        "state": {
+          "very_unlucky": "Very unlucky",
+          "unlucky": "Unlucky",
+          "normal": "Normal",
+          "lucky": "Lucky",
+          "very_lucky": "Very lucky"
+        }
+      },
+      "luck_ratio": {
+        "name": "Luck vs median"
+      },
+      "expected_median_best_difficulty": {
+        "name": "Expected median best difficulty"
+      },
+      "block_distance_factor": {
+        "name": "Block distance factor"
+      },
+      "bits_to_block": {
+        "name": "Bits to block"
+      },
+      "best_share_expected_hours": {
+        "name": "Expected interval for best share"
+      },
+      "block_chance_work_ppm": {
+        "name": "Equivalent block chance for work done"
+      },
+      "block_chance_24h_ppm": {
+        "name": "Block chance per 24 h"
+      },
+      "expected_block_years": {
+        "name": "Expected block interval"
+      },
+      "uptime": {
+        "name": "Session uptime"
+      },
+      "total_uptime": {
+        "name": "Total uptime"
+      },
+      "block_height": {
+        "name": "Block height"
+      },
+      "blocks_found": {
+        "name": "Blocks found"
+      },
+      "wifi_rssi": {
+        "name": "Wi-Fi signal"
+      },
+      "core_voltage": {
+        "name": "ASIC core voltage"
+      },
+      "current": {
+        "name": "Current"
+      }
+    },
+    "switch": {
+      "mining": {
+        "name": "Mining"
+      }
+    },
+    "button": {
+      "restart": {
+        "name": "Restart"
+      },
+      "identify": {
+        "name": "Identify"
+      }
+    }
+  }
+}
